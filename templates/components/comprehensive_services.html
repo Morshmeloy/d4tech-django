@@ -1,0 +1,36 @@
+<section class="py-8 md:py-16">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="space-y-12">
+            <div>
+                <div class="bg-card/40 text-card-foreground gap-4 md:gap-6 rounded-xl border py-4 md:py-6 shadow-sm backdrop-blur-sm transition-shadow duration-300 hover:shadow-xl flex flex-col">
+                    <div class="grid auto-rows-min items-start gap-1.5 px-4 md:px-6 pb-4 md:pb-8">
+                        <div class="flex flex-col md:flex-row items-center gap-4">
+                            <div class="flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users text-primary" aria-hidden="true" style="width:80px;height:80px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                            </div>
+                            <div class="text-2xl md:text-5xl font-bold flex-1 leading-tight text-center">Комплексные услуги и целевая аудитория</div>
+                        </div>
+                    </div>
+                    <div class="px-4 md:px-6 flex-1 flex flex-col">
+                        <div class="mb-6 md:mb-8 p-4 md:p-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-primary rounded-r-lg">
+                            <p class="text-gray-700 font-medium leading-relaxed text-base md:text-xl">Компания предлагает не просто поставку оборудования, а сквозные решения — от этапа проектирования и согласований до пусконаладки, обучения персонала и технической поддержки, с бесшовной интеграцией собственной разработки ПО, экспертизы в телемеханике и надежной связи.</p>
+                        </div>
+                        <p class="mb-4 md:mb-6 text-base md:text-lg leading-relaxed">Это обеспечивает успешную цифровую трансформацию заказчиков. Ключевое преимущество — сочетание инноваций и глубокой экспертизы, позиционирующее «Д4 технологии» как синоним надежности в создании цифрового будущего энергетики России.</p>
+                        <p class="mb-4 md:mb-6 text-base md:text-lg leading-relaxed"><strong>Целевая аудитория включает:</strong> сетевые компании (МРСК, ФСК и другие), генерирующие компании, крупные промышленные предприятия с собственной энергетической инфраструктурой, нефтегазовый сектор и объекты транспортной инфраструктуры.</p>
+                        <p class="text-base md:text-lg leading-relaxed">Решения компании помогают в комплексной автоматизации и повышении эффективности всех указанных сфер деятельности.</p>
+                        
+                        <!-- Кнопки -->
+                        <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+                            <a href="{% url 'core:solutions' %}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all cursor-pointer bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-11 px-6">
+                                Ознакомиться с услугами и решениями
+                            </a>
+                            <a href="{% url 'core:software' %}" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all cursor-pointer border border-primary text-primary hover:bg-primary/10 h-11 px-6">
+                                Собственное программное обеспечение
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

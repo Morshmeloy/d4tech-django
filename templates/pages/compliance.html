@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Правовая информация — Д4 Технологии{% endblock %}
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-center">Правовая информация и реквизиты</h1>
+    <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Левая колонка: реквизиты -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4 text-primary">Общие сведения</h2>
+                <dl class="space-y-3">
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Полное наименование</dt>
+                        <dd class="text-base">{{ contacts.full_name }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Сокращённое наименование</dt>
+                        <dd class="text-base">ООО «Д4 Технологии»</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">ИНН</dt>
+                        <dd class="text-base">{{ contacts.inn }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">ОГРН</dt>
+                        <dd class="text-base">{{ contacts.ogrn }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">ОКВЭД (основной)</dt>
+                        <dd class="text-base">{{ contacts.okved }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Коды видов деятельности в области ИТ</dt>
+                        <dd class="text-base">{{ contacts.it_activity_codes }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Адрес</dt>
+                        <dd class="text-base">{{ contacts.address }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Телефон</dt>
+                        <dd class="text-base">{{ contacts.phone }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Email</dt>
+                        <dd class="text-base">{{ contacts.email }}</dd>
+                    </div>
+                </dl>
+            </div>
+            <!-- Правая колонка: деятельность, ПО, технологии -->
+            <div>
+                <h2 class="text-xl font-semibold mb-4 text-primary">Деятельность и технологии</h2>
+                <dl class="space-y-3">
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Описание деятельности</dt>
+                        <dd class="text-base">{{ contacts.activity_description|default:"Информация отсутствует" }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Информация о стоимости товаров/услуг</dt>
+                        <dd class="text-base">{{ contacts.pricing_info|default:"Информация отсутствует" }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Права на ПО и способы предоставления</dt>
+                        <dd class="text-base">{{ contacts.rights_info|default:"Информация отсутствует" }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">Используемые технологии</dt>
+                        <dd class="text-base">{{ contacts.tech_stack|default:"Информация отсутствует" }}</dd>
+                    </div>
+                    <div>
+                        <dt class="text-sm font-medium text-muted-foreground">ПО в реестре российского ПО</dt>
+                        <dd class="text-base">{{ contacts.registry_info|default:"Информация отсутствует" }}</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+        <div class="mt-8 text-sm text-muted-foreground border-t border-border pt-4">
+            <p>Информация на этой странице размещена в соответствии с требованиями Приказа Минцифры России от 02.06.2025 № 511.</p>
+            <p class="mt-1">Сайт работает круглосуточно, доступ без регистрации.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

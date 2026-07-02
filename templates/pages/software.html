@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Программное обеспечение — Д4 Технологии{% endblock %}
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">Программное обеспечение D4NMS</h1>
+
+    <!-- Общее описание -->
+    <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 mb-8">
+        <p class="text-base md:text-lg leading-relaxed">
+            <strong>D4NMS</strong> — это интеллектуальная система мониторинга и управления сетями, обеспечивающая высокую степень автоматизации и гибкости. Она позволяет оперативно реагировать на все возможные угрозы и контролировать состояние сетевого оборудования в реальном времени.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed mt-4">
+            Подробная информация о продукте на специализированном ресурсе: <a href="https://d4nms.ru" target="_blank" class="text-primary hover:underline">d4nms.ru</a>
+        </p>
+    </div>
+
+    <!-- Правовой статус -->
+    <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4 text-primary">Правовой статус программного обеспечения</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 space-y-4">
+            <div>
+                <h3 class="font-semibold">Исключительные права</h3>
+                <p class="text-sm text-muted-foreground">Исключительные права на программное обеспечение принадлежат ООО «Д4 технологии» на основании Свидетельства о государственной регистрации программы для ЭВМ № <strong class="text-primary">2024617011</strong>, выданного Федеральной службой по интеллектуальной собственности (Роспатент).</p>
+                <p class="text-sm mt-1"><a href="#" class="text-primary hover:underline">Скачать скан свидетельства</a> (будет добавлен позже).</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Статус в Едином реестре</h3>
+                <p class="text-sm text-muted-foreground">Программный комплекс находится на стадии внесения в Единый реестр российских программ для ЭВМ и баз данных Минцифры России (заявка № <strong class="text-primary">362356</strong> находится на рассмотрении).</p>
+                <p class="text-sm mt-1">Ссылка на реестр: <a href="https://reestr.digital.gov.ru/request/9237381/?sphrase_id=20673471" target="_blank" class="text-primary hover:underline">https://reestr.digital.gov.ru/request/9237381/</a></p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Способы предоставления права использования</h3>
+                <p class="text-sm text-muted-foreground">Права на использование Программного комплекса D4NMS предоставляются конечным пользователям на основании <strong>Лицензионного договора</strong> путем передачи неисключительной лицензии в объёме и на срок, определённые соглашением сторон.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Порядок предоставления доступа (техническая поставка)</h3>
+                <p class="text-sm text-muted-foreground">Передача дистрибутива программного обеспечения D4NMS и сопроводительной технической документации осуществляется правообладателем в электронном виде (путем отправки на защищенный электронный адрес Заказчика или предоставления удаленного доступа к закрытому репозиторию компании) в течение 3 рабочих дней после подписания Лицензионного договора.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стоимость лицензирования -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4 text-primary">Стоимость лицензирования программного комплекса D4NMS</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 space-y-4">
+            <div>
+                <h3 class="font-semibold">Базовая лицензия</h3>
+                <p class="text-lg font-bold text-primary">500 000 рублей</p>
+                <p class="text-sm text-muted-foreground">(до 50 сетевых устройств)</p>
+            </div>
+            <div>
+                <h3 class="font-semibold">Расширенная лицензия</h3>
+                <p class="text-lg font-bold text-primary">+100 000 рублей</p>
+                <p class="text-sm text-muted-foreground">за каждые 10 хостов сверх базовой лицензии</p>
+            </div>
+        </div>
+        <div class="mt-4 text-sm text-muted-foreground">
+            <p>Для более подробной информации о продукте посетите специализированный ресурс: <a href="https://d4nms.ru" target="_blank" class="text-primary hover:underline">d4nms.ru</a></p>
+        </div>
+    </section>
+</div>
+{% endblock %}

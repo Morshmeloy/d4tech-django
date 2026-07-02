@@ -1,0 +1,77 @@
+{% load static %}
+<header class="sticky top-0 z-50 w-full bg-background shadow-md border-b border-border">
+    <div class="container flex h-20 max-w-screen-2xl items-center justify-between mx-auto px-6">
+        <a href="{% url 'core:home' %}" class="mr-6 flex items-center space-x-2">
+            <img src="{% static 'images/logo-d4.svg' %}" alt="D4 Logo" width="80" height="80" class="text-primary" style="color:transparent">
+        </a>
+        <div class="hidden md:flex items-center space-x-4">
+            <nav class="relative flex max-w-max flex-1 items-center justify-center" aria-label="Основная навигация">
+                <ul class="flex flex-1 list-none items-center justify-center gap-1">
+                    <li>
+                        <a href="{% url 'core:home' %}"
+                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
+                            О компании
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:solutions' %}"
+                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/solutions/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
+                            Решения и услуги
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:software' %}"
+                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/software/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
+                            Программное обеспечение
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:contacts' %}"
+                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/contacts/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
+                            Контакты
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:support' %}"
+                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/support/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
+                            Поддержка
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'core:compliance' %}"
+                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/compliance/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
+                            Правовая информация
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+            <div class="flex flex-col text-sm items-end">
+                <a href="tel:{{ contacts.phone }}">{{ contacts.phone }}</a>
+                <a href="mailto:{{ contacts.email }}">{{ contacts.website }}</a>
+            </div>
+        </div>
+        <div class="md:hidden">
+            <button id="mobile-menu-btn" class="inline-flex items-center justify-center rounded-md border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2" aria-label="Открыть меню">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                    <path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t bg-background">
+        <nav class="flex flex-col space-y-4 p-6" aria-label="Мобильная навигация">
+            <a href="{% url 'core:home' %}" class="text-sm font-medium hover:text-primary">О компании</a>
+            <a href="{% url 'core:solutions' %}" class="text-sm font-medium hover:text-primary">Решения и услуги</a>
+            <a href="{% url 'core:software' %}" class="text-sm font-medium hover:text-primary">Программное обеспечение</a>
+            <a href="{% url 'core:contacts' %}" class="text-sm font-medium hover:text-primary">Контакты</a>
+            <a href="{% url 'core:support' %}" class="text-sm font-medium hover:text-primary">Поддержка</a>
+            <a href="{% url 'core:compliance' %}" class="text-sm font-medium hover:text-primary">Правовая информация</a>
+            <div class="flex flex-col text-sm pt-4 border-t">
+                <a href="tel:{{ contacts.phone }}">{{ contacts.phone }}</a>
+                <a href="mailto:{{ contacts.email }}">{{ contacts.website }}</a>
+            </div>
+        </nav>
+    </div>
+</header>

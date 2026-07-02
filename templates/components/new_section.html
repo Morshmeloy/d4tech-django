@@ -1,0 +1,38 @@
+{% load static %}
+<section class="py-8 min-h-[60vh] md:h-[calc(100vh-5rem)] flex items-stretch">
+    <div class="container mx-auto flex flex-col h-full px-4 md:px-0">
+        <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 md:mt-14 mb-6 md:mb-8 text-foreground" data-aos="fade-down" data-aos-duration="600">
+            Лицензии и сертификаты
+        </h2>
+        <div class="flex flex-col flex-1 min-h-0">
+            <div class="swiper certificates-swiper h-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="max-w-lg w-full h-full rounded-lg overflow-hidden cursor-grab active:cursor-grabbing hover:shadow-lg transition-shadow duration-300">
+                                <img src="{% static 'images/partners.jpg' %}" alt="Сетевые компании" class="w-full h-full object-contain" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="max-w-lg w-full h-full rounded-lg overflow-hidden cursor-grab active:cursor-grabbing hover:shadow-lg transition-shadow duration-300">
+                                <img src="{% static 'images/reg.jpg' %}" alt="Генерирующие компании" class="w-full h-full object-contain" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex items-center justify-center h-full">
+                            <div class="max-w-lg w-full h-full rounded-lg overflow-hidden cursor-grab active:cursor-grabbing hover:shadow-lg transition-shadow duration-300">
+                                <img src="{% static 'images/sert.jpg' %}" alt="Промышленные предприятия" class="w-full h-full object-contain" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>

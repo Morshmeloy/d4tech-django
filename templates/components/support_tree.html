@@ -1,0 +1,264 @@
+<div class="w-full border border-border rounded-lg bg-background" style="height:600px;position:relative;overflow:hidden;" id="support-tree-container">
+    <svg id="tree-svg" style="position:absolute;top:0;left:0;width:1502px;height:650px;pointer-events:none;z-index:1;transform-origin:0 0;overflow:visible;">
+        <path class="tree-path" d="M516,130 C516,163 201,163 201,196"/>
+        <path class="tree-path" d="M516,130 C516,163 510,163 510,196"/>
+        <path class="tree-path" d="M516,130 C516,163 802,163 802,196"/>
+        <path class="tree-path" d="M201,272 C201,334 106,334 106,396"/>
+        <path class="tree-path" d="M201,272 C201,409 350,409 350,546"/>
+        <path class="tree-path" d="M510,272 C510,309 420,309 420,346"/>
+        <path class="tree-path" d="M510,272 C510,309 670,309 670,346"/>
+        <path class="tree-path" d="M802,272 C802,409 850,409 850,546"/>
+        <path class="tree-path" d="M802,272 C802,334 1000,334 1000,396"/>
+    </svg>
+
+    <div id="tree-nodes" style="position:absolute;top:0;left:0;width:100%;height:100%;transform-origin:0 0;">
+
+        <div style="position:absolute;transform:translate(400px,50px);z-index:2;animation:nodeFadeIn 0.4s ease 0.1s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-card border-2 border-primary/20 min-w-[200px] hover:shadow-xl transition-all duration-300 hover:border-primary/40">
+                <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                        <span class="text-primary text-lg">🏠</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-semibold text-card-foreground">Центр поддержки</div>
+                        <div class="text-xs text-muted-foreground mt-1">Выберите тип проблемы</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(100px,200px);z-index:2;animation:nodeFadeIn 0.4s ease 0.2s both;">
+            <div class="px-4 py-3 shadow-lg rounded-lg bg-secondary border-2 border-secondary-foreground/20 min-w-[180px] hover:shadow-xl transition-all duration-300 hover:border-secondary-foreground/40">
+                <div class="text-center">
+                    <div class="text-sm font-semibold text-secondary-foreground">Технические проблемы</div>
+                    <div class="text-xs text-secondary-foreground/70 mt-1">Проблемы с оборудованием?</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(420px,200px);z-index:2;animation:nodeFadeIn 0.4s ease 0.3s both;">
+            <div class="px-4 py-3 shadow-lg rounded-lg bg-secondary border-2 border-secondary-foreground/20 min-w-[180px] hover:shadow-xl transition-all duration-300 hover:border-secondary-foreground/40">
+                <div class="text-center">
+                    <div class="text-sm font-semibold text-secondary-foreground">SCADA системы</div>
+                    <div class="text-xs text-secondary-foreground/70 mt-1">Вопросы по ПО?</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(700px,200px);z-index:2;animation:nodeFadeIn 0.4s ease 0.4s both;">
+            <div class="px-4 py-3 shadow-lg rounded-lg bg-secondary border-2 border-secondary-foreground/20 min-w-[180px] hover:shadow-xl transition-all duration-300 hover:border-secondary-foreground/40">
+                <div class="text-center">
+                    <div class="text-sm font-semibold text-secondary-foreground">Общие вопросы</div>
+                    <div class="text-xs text-secondary-foreground/70 mt-1">Информация и консультации?</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(0px,400px);z-index:2;animation:nodeFadeIn 0.4s ease 0.5s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-primary text-primary-foreground border-2 border-primary min-w-[200px] hover:shadow-xl transition-all duration-300 hover:bg-primary/90">
+                <div class="text-center">
+                    <div class="text-sm font-semibold">Оборудование</div>
+                    <div class="text-xs text-primary-foreground/80 mt-1">Запросить поддержку</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(250px,550px);z-index:2;animation:nodeFadeIn 0.4s ease 0.6s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-primary text-primary-foreground border-2 border-primary min-w-[200px] hover:shadow-xl transition-all duration-300 hover:bg-primary/90">
+                <div class="text-center">
+                    <div class="text-sm font-semibold">Настройка</div>
+                    <div class="text-xs text-primary-foreground/80 mt-1">Онлайн консультация</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(320px,350px);z-index:2;animation:nodeFadeIn 0.4s ease 0.55s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-primary text-primary-foreground border-2 border-primary min-w-[200px] hover:shadow-xl transition-all duration-300 hover:bg-primary/90">
+                <div class="text-center">
+                    <div class="text-sm font-semibold">Установка ПО</div>
+                    <div class="text-xs text-primary-foreground/80 mt-1">Руководство по установке</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(570px,350px);z-index:2;animation:nodeFadeIn 0.4s ease 0.65s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-primary text-primary-foreground border-2 border-primary min-w-[200px] hover:shadow-xl transition-all duration-300 hover:bg-primary/90">
+                <div class="text-center">
+                    <div class="text-sm font-semibold">Обновления</div>
+                    <div class="text-xs text-primary-foreground/80 mt-1">Центр загрузок</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(750px,550px);z-index:2;animation:nodeFadeIn 0.4s ease 0.75s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-primary text-primary-foreground border-2 border-primary min-w-[200px] hover:shadow-xl transition-all duration-300 hover:bg-primary/90">
+                <div class="text-center">
+                    <div class="text-sm font-semibold">Документация</div>
+                    <div class="text-xs text-primary-foreground/80 mt-1">База знаний</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="position:absolute;transform:translate(900px,400px);z-index:2;animation:nodeFadeIn 0.4s ease 0.7s both;">
+            <div class="px-6 py-4 shadow-lg rounded-lg bg-primary text-primary-foreground border-2 border-primary min-w-[200px] hover:shadow-xl transition-all duration-300 hover:bg-primary/90">
+                <div class="text-center">
+                    <div class="text-sm font-semibold">Обучение</div>
+                    <div class="text-xs text-primary-foreground/80 mt-1">Записаться на курс</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<div id="tree-controls">
+    <button id="tree-zoom-in" title="Zoom in">+</button>
+    <button id="tree-zoom-out" title="Zoom out">−</button>
+    <button id="tree-fit" title="Fit view">
+        <svg width="14" height="14" viewBox="0 0 32 30" fill="currentColor"><path d="M3.692 4.63c0-.53.4-.938.939-.938h5.215V0H4.708C2.13 0 0 2.054 0 4.63v5.216h3.692V4.631zM27.354 0h-5.2v3.692h5.17c.53 0 .984.4.984.939v5.215H32V4.631A4.624 4.624 0 0027.354 0zm.954 24.83c0 .532-.4.94-.939.94h-5.215v3.768h5.215c2.577 0 4.631-2.13 4.631-4.707v-5.139h-3.692v5.139zm-23.677.94c-.531 0-.939-.4-.939-.94v-5.138H0v5.139c0 2.577 2.13 4.707 4.708 4.707h5.138V25.77H4.631z"/></svg>
+    </button>
+    <button id="tree-lock" title="Toggle interactivity">
+        <svg width="14" height="14" viewBox="0 0 25 32" fill="currentColor"><path d="M21.333 10.667H19.81V7.619C19.81 3.429 16.38 0 12.19 0c-4.114 1.828-1.37 2.133.305 2.438 1.676.305 4.42 2.59 4.42 5.181v3.048H3.047A3.056 3.056 0 000 13.714v15.238A3.056 3.056 0 003.048 32h18.285a3.056 3.056 0 003.048-3.048V13.714a3.056 3.056 0 00-3.048-3.047zM12.19 24.533a3.056 3.056 0 01-3.047-3.047 3.056 3.056 0 013.047-3.048 3.056 3.056 0 013.048 3.048 3.056 3.056 0 01-3.048 3.047z"/></svg>
+    </button>
+</div>
+</div>
+
+<script>
+(function() {
+    const container = document.getElementById('support-tree-container');
+    const svg = document.getElementById('tree-svg');
+    const nodes = document.getElementById('tree-nodes');
+    if (!container || !svg || !nodes) return;
+
+    // Рассчитываем начальный масштаб на основе ширины контейнера
+    function getInitialTransform() {
+        const w = container.clientWidth;
+        // Дерево занимает примерно 1100px в ширину, 650px в высоту
+        const treeW = 1100, treeH = 650;
+        var s, x, y;
+        if (w < 768) {
+            // Мобильные — масштабируем чтобы всё дерево влезло
+            s = Math.min(w / treeW, 600 / treeH) * 0.9;
+            x = (w - treeW * s) / 2;
+            y = (600 - treeH * s) / 2;
+        } else {
+            s = 0.789;
+            x = 230;
+            y = -20;
+        }
+        return { tx: x, ty: y, scale: s };
+    }
+
+    var init = getInitialTransform();
+    var tx = init.tx, ty = init.ty, scale = init.scale;
+    let isDragging = false, startX = 0, startY = 0, startTx = 0, startTy = 0;
+
+    function applyTransform() {
+        const t = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+        svg.style.transform = t;
+        nodes.style.transform = t;
+    }
+
+    applyTransform();
+
+    // Zoom с колёсиком
+    container.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        var rect = container.getBoundingClientRect();
+        var mx = e.clientX - rect.left;
+        var my = e.clientY - rect.top;
+        var delta = e.deltaY > 0 ? 0.9 : 1.1;
+        var newScale = Math.min(Math.max(scale * delta, 0.15), 3);
+        tx = mx - (mx - tx) * (newScale / scale);
+        ty = my - (my - ty) * (newScale / scale);
+        scale = newScale;
+        applyTransform();
+    }, { passive: false });
+
+    // Pan мышью
+    container.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        startTx = tx;
+        startTy = ty;
+        container.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        tx = startTx + (e.clientX - startX);
+        ty = startTy + (e.clientY - startY);
+        applyTransform();
+    });
+
+    window.addEventListener('mouseup', function() {
+        isDragging = false;
+        container.style.cursor = 'grab';
+    });
+
+    // Touch поддержка
+    var lastTouchDist = 0;
+    container.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            startTx = tx; startTy = ty;
+        } else if (e.touches.length === 2) {
+            lastTouchDist = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+        }
+    }, { passive: true });
+
+    container.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1 && isDragging) {
+            tx = startTx + (e.touches[0].clientX - startX);
+            ty = startTy + (e.touches[0].clientY - startY);
+            applyTransform();
+        } else if (e.touches.length === 2) {
+            var dist = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            var delta = dist / lastTouchDist;
+            scale = Math.min(Math.max(scale * delta, 0.15), 3);
+            lastTouchDist = dist;
+            applyTransform();
+        }
+    }, { passive: true });
+
+    container.addEventListener('touchend', function() { isDragging = false; });
+
+    container.style.cursor = 'grab';
+
+    // Controls
+    document.getElementById('tree-zoom-in').addEventListener('click', function() {
+        scale = Math.min(scale * 1.2, 3);
+        applyTransform();
+    });
+    document.getElementById('tree-zoom-out').addEventListener('click', function() {
+        scale = Math.max(scale * 0.8, 0.15);
+        applyTransform();
+    });
+    document.getElementById('tree-fit').addEventListener('click', function() {
+        var fit = getInitialTransform();
+        tx = fit.tx; ty = fit.ty; scale = fit.scale;
+        applyTransform();
+    });
+    var locked = false;
+    document.getElementById('tree-lock').addEventListener('click', function() {
+        locked = !locked;
+        container.style.pointerEvents = locked ? 'none' : 'auto';
+        this.style.opacity = locked ? '0.4' : '1';
+    });
+
+    // Пересчитываем при ресайзе
+    window.addEventListener('resize', function() {
+        var fit = getInitialTransform();
+        tx = fit.tx; ty = fit.ty; scale = fit.scale;
+        applyTransform();
+    });
+})();
+</script>

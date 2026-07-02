@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Решения и услуги — Д4 Технологии{% endblock %}
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">Решения и услуги</h1>
+
+    <!-- Направления автоматизации -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6 text-primary">Направления автоматизации</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold mb-2">Мониторинг и контроль</h3>
+                <p class="text-sm text-muted-foreground">Системы сбора и анализа данных, SCADA, телемеханика.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold mb-2">Промышленная связь и ССПИ</h3>
+                <p class="text-sm text-muted-foreground">Построение высоконадёжных систем связи и передачи информации.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold mb-2">Энергоснабжение и автоматика</h3>
+                <p class="text-sm text-muted-foreground">Автоматизация подстанций, управление энергопотреблением.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold mb-2">Контроль ИТ-инфраструктуры</h3>
+                <p class="text-sm text-muted-foreground">Мониторинг серверов, сетей, приложений.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold mb-2">Информационная безопасность КИИ</h3>
+                <p class="text-sm text-muted-foreground">Защита критической информационной инфраструктуры.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Инженерный стек услуг -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6 text-primary">Инженерный стек услуг</h2>
+        <div class="space-y-6">
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">1. Комплексный консалтинг и проектирование</h3>
+                <p class="text-sm text-muted-foreground mt-2">Предпроектное обследование и технический аудит объектов автоматизации, проектирование и разработка ИТ-архитектуры программных комплексов, баз данных и компьютерных систем цифровых подстанций, подготовка программного обеспечения систем к эксплуатации.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.02, 62.02.1, 62.02.4 | ИТ-направления 1.01, 1.06</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">2. Разработка и кастомизация ПО</h3>
+                <p class="text-sm text-muted-foreground mt-2">Создание прикладного ПО, проектирование БД реального времени, адаптация и модификация модулей под ТУ заказчика.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.01, 62.09 | ИТ-направление 1.01</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">3. Системная интеграция и пусконаладка</h3>
+                <p class="text-sm text-muted-foreground mt-2">Интеграция оборудования и программных средств в контур мониторинга, развертывание сетевых программных платформ, настройка и ввод ИТ-систем и специализированного ПО подстанций в эксплуатацию.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.03, 62.09 | ИТ-направления 1.01, 1.06</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">4. Техническое сопровождение и администрирование ИТ-сетей</h3>
+                <p class="text-sm text-muted-foreground mt-2">Непрерывное сопровождение программного обеспечения, удаленное администрирование систем мониторинга ИТ-инфраструктуры подстанций и программных средств систем промышленной связи.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.03.13, 95.11 | ИТ-направления 1.01, 1.06</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">5. Управление данными и диспетчеризация</h3>
+                <p class="text-sm text-muted-foreground mt-2">Автоматизированный сбор, запись, накопление и обработка телеметрии (ТИ, ТУ, ТС), ведение баз данных реального времени.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 63.11, 63.12 | ИТ-направление 26.01</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">6. Поставка программно-аппаратных комплексов (ПАК) и ПО</h3>
+                <p class="text-sm text-muted-foreground mt-2">Оптовая поставка, дистрибуция и реализация прав на лицензионное программное обеспечение, а также готовых программно-аппаратных комплексов, шкафов телемеханики и промышленного сетевого оборудования с предустановленным софтом D4NMS.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 46.51.2 | ИТ-направления 2.01, 27.01</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="text-lg font-semibold text-primary">7. Организация сетей и передача данных</h3>
+                <p class="text-sm text-muted-foreground mt-2">Обеспечение межобъектной связи, предоставление услуг по передаче данных, защищенному доступу к ИКТ-сетям и администрированию средств сетевой безопасности на базе программного комплекса D4NMS и партнерских решений.</p>
+                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 61.10.3 | ИТ-направления 1.06, 11.01, 18.01</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ориентировочные базовые ставки -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-6 text-primary">Ориентировочные базовые ставки по этапам</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="font-semibold">Технологический аудит и предпроектное обследование</h3>
+                <p class="text-lg font-bold text-primary mt-2">от 10 000 руб.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="font-semibold">Разработка ТЗ и проектирование</h3>
+                <p class="text-lg font-bold text-primary mt-2">от 30 000 руб.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="font-semibold">Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)</h3>
+                <p class="text-lg font-bold text-primary mt-2">от 100 000 руб.</p>
+            </div>
+            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+                <h3 class="font-semibold">Техническая поддержка и сопровождение</h3>
+                <p class="text-lg font-bold text-primary mt-2">от 10 000 руб.</p>
+            </div>
+        </div>
+        <div class="mt-6 p-4 bg-muted/20 rounded-lg border border-border text-sm text-muted-foreground">
+            <p>Ввиду высокой технологической сложности и индивидуальных параметров объектов автоматизации энергетики, окончательная оценка стоимости каждого проекта рассчитывается строго индивидуально на основании согласованного технического задания (ТЗ) заказчика.</p>
+        </div>
+    </section>
+</div>
+{% endblock %}
