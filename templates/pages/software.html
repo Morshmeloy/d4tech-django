@@ -1,62 +1,122 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Программное обеспечение — Д4 Технологии{% endblock %}
 {% block content %}
 <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">Программное обеспечение D4NMS</h1>
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">Программное обеспечение</h1>
+    <p class="text-center text-lg font-medium text-muted-foreground mb-8">Собственные программные продукты «Д4 технологии»</p>
 
-    <!-- Общее описание -->
-    <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 mb-8">
-        <p class="text-base md:text-lg leading-relaxed">
-            <strong>D4NMS</strong> — это интеллектуальная система мониторинга и управления сетями, обеспечивающая высокую степень автоматизации и гибкости. Она позволяет оперативно реагировать на все возможные угрозы и контролировать состояние сетевого оборудования в реальном времени.
+    <!-- Российская система мониторинга и управления сетевой инфраструктурой D4 NMS -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Российская система мониторинга и управления сетевой инфраструктурой D4 NMS</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+            <p class="text-sm text-muted-foreground leading-relaxed">
+                Компания «Д4 технологии» является разработчиком и правообладателем собственного программного обеспечения <strong>D4 NMS</strong>, которое выступает интеллектуальным ядром наших решений.
+            </p>
+            <p class="text-sm text-muted-foreground leading-relaxed mt-3">
+                Наша технологическая платформа обеспечивает максимальную эффективность и интеграцию, включая решения для гибкого сбора, визуализации и анализа телеметрических данных в реальном времени, алгоритмы для прогнозной аналитики, анализа режимов оборудования, выявления аномалий и оптимизации энергопотребления, а также инструменты для конфигурирования (проектирование мнемосхем, настройка баз данных телемеханики и управление устройствами).
+            </p>
+            <h3 class="text-lg font-semibold mt-4 text-primary">Функциональные возможности D4 NMS</h3>
+            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1 mt-2">
+                <li><strong>Сбор сетевой телеметрии:</strong> Высокопроизводительное решение для оперативного контроля состояния критически важной ИТ- и телеком-инфраструктуры в режиме реального времени.</li>
+                <li><strong>Инструменты конфигурирования:</strong> Интуитивно понятное проектирование графических мнемосхем, быстрая настройка баз данных телемеханики и централизованное управление сетевыми устройствами.</li>
+                <li><strong>Доступность и мобильность:</strong> Современные web-интерфейсы и мобильные приложения для безопасного удаленного доступа к оперативным данным с любых типов устройств.</li>
+                <li><strong>Единая среда интеграции:</strong> Программный контур позволяет объединять разнородные системы (телемеханику, АИИС КУЭ, технологическое видеонаблюдение, телефонию) в общем информационном пространстве.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Правовая информация, лицензирование и техническая поддержка -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Правовая информация, лицензирование и техническая поддержка</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 space-y-6">
+            <div>
+                <h3 class="text-xl font-bold text-primary">Реестровый статус и правообладание</h3>
+                <div class="mt-3 space-y-2">
+                    <p class="text-sm text-muted-foreground"><strong>Правовой статус ПО:</strong> Исключительные права на программное обеспечение принадлежат ООО «Д4 технологии» на основании Свидетельства о государственной регистрации программы для ЭВМ <a href="{% static 'images/свидетельство о госрегистрации ПО IPD D4 МАКС.pdf' %}" target="_blank" class="text-primary hover:underline font-semibold">№ 2026611391</a>, выданного Федеральной службой по интеллектуальной собственности (Роспатент).</p>
+                    <p class="text-sm text-muted-foreground"><strong>Статус в Едином реестре:</strong> Программный комплекс <strong>D4 NMS</strong> официально включен в Единый реестр российских программ для ЭВМ и баз данных Минцифры России. Реестровая запись <a href="{% static 'images/Сведения из реестра Российского ПО Минцифры D4NMS №33911 от 18.06.26.pdf' %}" target="_blank" class="text-primary hover:underline font-semibold">№33911</a>.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-primary">Стоимость и условия лицензирования</h3>
+                <div class="mt-3 space-y-2">
+                    <p class="text-sm text-muted-foreground"><strong>Базовая лицензия:</strong> 500 000 рублей (включает поддержку до 50 сетевых устройств).</p>
+                    <p class="text-sm text-muted-foreground"><strong>Расширенная лицензия:</strong> дополнительные 100 000 рублей за каждые 10 хостов сверх базовой лицензии.</p>
+                    <p class="text-sm text-muted-foreground"><strong>Способ предоставления прав:</strong> Права на использование Программного комплекса D4NMS предоставляются конечным пользователям на основании Лицензионного договора путем передачи неисключительной лицензии в объеме и на срок, определенные соглашением сторон.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-primary">Порядок предоставления доступа (техническая поставка)</h3>
+                <p class="text-sm text-muted-foreground mt-2">Передача дистрибутива программного обеспечения D4NMS и сопроводительной технической документации осуществляется правообладателем в электронном виде (путем отправки на защищенный электронный адрес Заказчика или предоставления удаленного доступа к закрытому репозиторию компании) в течение 3 рабочих дней после подписания Лицензионного договора.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-primary">Техническая поддержка и сопровождение</h3>
+                <p class="text-sm text-muted-foreground mt-2">Техническая поддержка, гарантийное обслуживание, модернизация и сопровождение системы D4 NMS осуществляются силами штатных специалистов компании «Д4 технологии» на русском языке на всей территории Российской Федерации. Время реагирования на инциденты и каналы связи регламентируются условиями договора технической поддержки (SLA).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Технические характеристики -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Технические характеристики</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                <li><strong>Производительность:</strong> до 1000 устройств на сервере; интервал опроса — настраиваемый; до 50 одновременных пользователей.</li>
+                <li><strong>Мониторинг:</strong> Ping, SSH, SNMP; маршрутизаторы, коммутаторы, серверы, МЭ, точки доступа, IP-телефоны; порты, VLAN, STP.</li>
+                <li><strong>Управление:</strong> выполнение CLI-команд по SSH, в том числе по расписанию.</li>
+                <li><strong>Поддерживаемые вендоры:</strong> Cisco, Eltex, Huawei, MikroTik, Juniper.</li>
+                <li><strong>Безопасность:</strong> шифрование учётных данных (Fernet), защита API (CORS), аудит действий пользователей.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Программное обеспечение и веб-разработка -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Программное обеспечение и веб-разработка</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                <li><strong>Python</strong> — серверная логика, интеграционные сервисы, аналитика</li>
+                <li><strong>Django</strong> — корпоративные веб-порталы и административные интерфейсы</li>
+                <li><strong>JavaScript / HTML / CSS</strong> — клиентские web-интерфейсы и мнемосхемы</li>
+                <li><strong>PostgreSQL</strong> — хранение телеметрии, событий и конфигураций</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Промышленная автоматизация и SCADA -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Промышленная автоматизация и SCADA</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                <li><strong>SCADA / HMI</strong> — сбор, визуализация и управление технологическими процессами</li>
+                <li><strong>Протоколы телемеханики</strong> — IEC 60870-5-104, IEC 61850, Modbus и др.</li>
+                <li><strong>АСУ ТП</strong> — интеграция с РЗА, АИИС КУЭ, системами видеонаблюдения и связи</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Инфраструктура и эксплуатация -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-primary mb-4">Инфраструктура и эксплуатация</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+            <ul class="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                <li><strong>Docker</strong> — контейнеризация и развёртывание сервисов</li>
+                <li><strong>MPLS / SD-WAN / SPbT</strong> — построение отказоустойчивых сетей передачи данных</li>
+                <li><strong>Big Data</strong> — прогнозная аналитика, обработка архивов телеметрии</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Ссылка на d4nms.ru (выделенный блок) -->
+    <div class="mt-10 p-6 bg-gradient-to-r from-primary/20 to-primary/5 border-2 border-primary rounded-xl text-center shadow-lg">
+        <p class="text-lg font-bold text-foreground">
+            Официальный сайт продукта и техническая документация:
+            <a href="https://d4nms.ru" target="_blank" class="text-primary hover:underline text-xl font-extrabold ml-2">d4nms.ru</a>
         </p>
-        <p class="text-base md:text-lg leading-relaxed mt-4">
-            Подробная информация о продукте на специализированном ресурсе: <a href="https://d4nms.ru" target="_blank" class="text-primary hover:underline">d4nms.ru</a>
-        </p>
+        <p class="text-sm text-muted-foreground mt-2">Перейдите по ссылке для получения подробной информации</p>
     </div>
-
-    <!-- Правовой статус -->
-    <section class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4 text-primary">Правовой статус программного обеспечения</h2>
-        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 space-y-4">
-            <div>
-                <h3 class="font-semibold">Исключительные права</h3>
-                <p class="text-sm text-muted-foreground">Исключительные права на программное обеспечение принадлежат ООО «Д4 технологии» на основании Свидетельства о государственной регистрации программы для ЭВМ № <strong class="text-primary">2024617011</strong>, выданного Федеральной службой по интеллектуальной собственности (Роспатент).</p>
-                <p class="text-sm mt-1"><a href="#" class="text-primary hover:underline">Скачать скан свидетельства</a> (будет добавлен позже).</p>
-            </div>
-            <div>
-                <h3 class="font-semibold">Статус в Едином реестре</h3>
-                <p class="text-sm text-muted-foreground">Программный комплекс находится на стадии внесения в Единый реестр российских программ для ЭВМ и баз данных Минцифры России (заявка № <strong class="text-primary">362356</strong> находится на рассмотрении).</p>
-                <p class="text-sm mt-1">Ссылка на реестр: <a href="https://reestr.digital.gov.ru/request/9237381/?sphrase_id=20673471" target="_blank" class="text-primary hover:underline">https://reestr.digital.gov.ru/request/9237381/</a></p>
-            </div>
-            <div>
-                <h3 class="font-semibold">Способы предоставления права использования</h3>
-                <p class="text-sm text-muted-foreground">Права на использование Программного комплекса D4NMS предоставляются конечным пользователям на основании <strong>Лицензионного договора</strong> путем передачи неисключительной лицензии в объёме и на срок, определённые соглашением сторон.</p>
-            </div>
-            <div>
-                <h3 class="font-semibold">Порядок предоставления доступа (техническая поставка)</h3>
-                <p class="text-sm text-muted-foreground">Передача дистрибутива программного обеспечения D4NMS и сопроводительной технической документации осуществляется правообладателем в электронном виде (путем отправки на защищенный электронный адрес Заказчика или предоставления удаленного доступа к закрытому репозиторию компании) в течение 3 рабочих дней после подписания Лицензионного договора.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Стоимость лицензирования -->
-    <section>
-        <h2 class="text-2xl font-semibold mb-4 text-primary">Стоимость лицензирования программного комплекса D4NMS</h2>
-        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 space-y-4">
-            <div>
-                <h3 class="font-semibold">Базовая лицензия</h3>
-                <p class="text-lg font-bold text-primary">500 000 рублей</p>
-                <p class="text-sm text-muted-foreground">(до 50 сетевых устройств)</p>
-            </div>
-            <div>
-                <h3 class="font-semibold">Расширенная лицензия</h3>
-                <p class="text-lg font-bold text-primary">+100 000 рублей</p>
-                <p class="text-sm text-muted-foreground">за каждые 10 хостов сверх базовой лицензии</p>
-            </div>
-        </div>
-        <div class="mt-4 text-sm text-muted-foreground">
-            <p>Для более подробной информации о продукте посетите специализированный ресурс: <a href="https://d4nms.ru" target="_blank" class="text-primary hover:underline">d4nms.ru</a></p>
-        </div>
-    </section>
 </div>
 {% endblock %}

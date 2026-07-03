@@ -1,12 +1,15 @@
 {% load static %}
 <footer class="w-full border-b bg-background shadow-md mx-auto">
     <div class="container w-full mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+        <!-- Логотип и описание -->
         <div class="flex flex-col space-y-4">
             <a href="{% url 'core:home' %}" class="flex items-center space-x-2">
                 <img src="{% static 'images/logo-d4.svg' %}" alt="D4 Logo" width="120" height="120" class="md:w-[160px] md:h-[160px]" style="color:transparent">
             </a>
             <p class="text-sm">Комплексная автоматизация и цифровизация объектов электроэнергетики</p>
         </div>
+
+        <!-- Навигация -->
         <div>
             <h3 class="font-semibold mb-4">Навигация</h3>
             <nav class="flex flex-col space-y-2 text-sm" aria-label="Навигация по сайту">
@@ -15,25 +18,32 @@
                 <a href="{% url 'core:software' %}" class="hover:text-primary">Программное обеспечение</a>
                 <a href="{% url 'core:contacts' %}" class="hover:text-primary">Контакты</a>
                 <a href="{% url 'core:support' %}" class="hover:text-primary">Поддержка</a>
-                <a href="{% url 'core:compliance' %}" class="hover:text-primary">Правовая информация</a>
             </nav>
         </div>
+
+        <!-- Контакты -->
         <div>
             <h3 class="font-semibold mb-4">Контакты</h3>
             <div class="flex flex-col space-y-2 text-sm">
-                <a href="tel:{{ contacts.phone }}">{{ contacts.phone }}</a>
-                <a href="mailto:{{ contacts.email }}">{{ contacts.website }}</a>
-                <p>{{ contacts.address }}</p>
+                <div><span class="font-medium">E-mail:</span> <a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a></div>
+                <div><span class="font-medium">Тел:</span> <a href="tel:{{ contacts.phone }}">{{ contacts.phone }}</a></div>
+                <div><span class="font-medium">Адрес:</span> <span>{{ contacts.address }}</span></div>
             </div>
         </div>
     </div>
-    <div class="container w-full mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-6 border-t">
-        <div class="text-balance text-center text-sm leading-loose md:text-left">
-            <p>© {% now "Y" %} D4 Технологии. Все права защищены.</p>
+
+    <!-- Нижняя часть (реквизиты, правовая информация, копирайт) -->
+    <div class="container w-full mx-auto py-4 px-6 border-t">
+        <div class="text-left text-sm leading-loose">
+            <p><strong>Общество с ограниченной ответственностью «Д4 технологии»</strong></p>
             <p class="text-xs text-muted-foreground mt-1">
-                ИНН {{ contacts.inn }} | КПП 772301001 | ОГРН {{ contacts.ogrn }}
+                ИНН: {{ contacts.inn }} | ОГРН: {{ contacts.ogrn }} | КПП: 772301001
             </p>
+            <p class="text-xs mt-2">
+                <a href="{% url 'core:compliance' %}" class="hover:text-primary">Правовая информация (Приказ Минцифры РФ № 511)</a>
+            </p>
+            <p class="text-xs text-muted-foreground mt-1">© 2021–{% now "Y" %} Все права защищены.</p>
         </div>
-        <p class="text-center text-sm leading-loose md:text-left">Разработка сайта — D4 Технологии</p>
+        <div class="text-left text-xs text-muted-foreground mt-2">Разработка сайта — Д4 Технологии</div>
     </div>
 </footer>

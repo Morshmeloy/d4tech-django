@@ -4,99 +4,232 @@
 <div class="container mx-auto px-4 py-8">
     <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">Решения и услуги</h1>
 
-    <!-- Направления автоматизации -->
+    <!-- Блок 1: Направления автоматизации и показатели эффективности -->
     <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6 text-primary">Направления автоматизации</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold mb-2">Мониторинг и контроль</h3>
-                <p class="text-sm text-muted-foreground">Системы сбора и анализа данных, SCADA, телемеханика.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold mb-2">Промышленная связь и ССПИ</h3>
-                <p class="text-sm text-muted-foreground">Построение высоконадёжных систем связи и передачи информации.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold mb-2">Энергоснабжение и автоматика</h3>
-                <p class="text-sm text-muted-foreground">Автоматизация подстанций, управление энергопотреблением.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold mb-2">Контроль ИТ-инфраструктуры</h3>
-                <p class="text-sm text-muted-foreground">Мониторинг серверов, сетей, приложений.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold mb-2">Информационная безопасность КИИ</h3>
-                <p class="text-sm text-muted-foreground">Защита критической информационной инфраструктуры.</p>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
+            <p class="text-center text-lg font-medium mb-8">Выберите интересующий технологический модуль для просмотра показателей эффективности решений</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="direction-pair">
+                <!-- Левая колонка: Инженерные направления -->
+                <div>
+                    <h2 class="text-xl font-semibold text-primary mb-4">Инженерные направления</h2>
+                    <ul class="space-y-3" id="left-list">
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="1">
+                            <strong>Дистанционный мониторинг и технологический контроль:</strong> автоматизированный сбор параметров телеметрии (ТИ, ТУ, ТС) с ПЛК подстанций.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="2">
+                            <strong>Промышленная связь и ССПИ:</strong> проектирование и построение отказоустойчивых систем передачи данных по протоколам МЭК 104 и МЭК 61850.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="3">
+                            <strong>Энергоснабжение и автоматика:</strong> комплектация и интеграция систем гарантированного питания и низковольтных щитов (шкафы НКУ).
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="4">
+                            <strong>Сквозной контроль ИТ-инфраструктуры:</strong> непрерывный мониторинг и цифровизация объектов на базе собственной real-time платформы D4NMS.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="5">
+                            <strong>Информационная безопасность КИИ:</strong> технологический аудит и комплексная киберзащита энергообъектов в соответствии с ФЗ-187.
+                        </li>
+                    </ul>
+                </div>
+                <!-- Правая колонка: Бизнес-эффект -->
+                <div>
+                    <h2 class="text-xl font-semibold text-primary mb-4">Бизнес-эффект</h2>
+                    <ul class="space-y-3" id="right-list">
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="1">
+                            <strong>БЕЗАВАРИЙНОСТЬ:</strong> мгновенное обнаружение отклонений в работе оборудования и предотвращение технологических сбоев.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="2">
+                            <strong>НАБЛЮДАЕМОСТЬ:</strong> 100% визуализация топологии сети и прозрачность передачи данных на диспетчерские пункты в реальном времени.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="3">
+                            <strong>СНИЖЕНИЕ OPEX:</strong> сокращение затрат на обслуживание за счет уменьшения количества выездов ремонтных бригад на объекты.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="4">
+                            <strong>ЭФФЕКТИВНОСТЬ:</strong> multi-vendor экономия бюджета, мгновенный отклик на инциденты и 100% готовность к импортозамещению.
+                        </li>
+                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="5">
+                            <strong>КИБЕРУСТОЙЧИВОСТЬ (ФЗ-187):</strong> гарантированная защита периметра от внешних угроз и выполнение требований Минэнерго и ФСТЭК.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Инженерный стек услуг -->
+    <!-- Блок 2: Инженерный стек услуг (7 карточек) -->
     <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-6 text-primary">Инженерный стек услуг</h2>
         <div class="space-y-6">
+            <!-- Карточка 1 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">1. Комплексный консалтинг и проектирование</h3>
+                <h3 class="text-lg font-semibold text-primary">Комплексный консалтинг и проектирование</h3>
                 <p class="text-sm text-muted-foreground mt-2">Предпроектное обследование и технический аудит объектов автоматизации, проектирование и разработка ИТ-архитектуры программных комплексов, баз данных и компьютерных систем цифровых подстанций, подготовка программного обеспечения систем к эксплуатации.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.02, 62.02.1, 62.02.4 | ИТ-направления 1.01, 1.06</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.02</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.02.1</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.02.4</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.06</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 8.01</span>
+                </div>
             </div>
+            <!-- Карточка 2 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">2. Разработка и кастомизация ПО</h3>
-                <p class="text-sm text-muted-foreground mt-2">Создание прикладного ПО, проектирование БД реального времени, адаптация и модификация модулей под ТУ заказчика.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.01, 62.09 | ИТ-направление 1.01</p>
+                <h3 class="text-lg font-semibold text-primary">Разработка и кастомизация ПО</h3>
+                <p class="text-sm text-muted-foreground mt-2">Создание прикладного программного обеспечения, проектирование баз данных реального времени, адаптация, модификация, доработка и кастомизация программных модулей под технические условия заказчика.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.09</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.01</span>
+                </div>
             </div>
+            <!-- Карточка 3 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">3. Системная интеграция и пусконаладка</h3>
-                <p class="text-sm text-muted-foreground mt-2">Интеграция оборудования и программных средств в контур мониторинга, развертывание сетевых программных платформ, настройка и ввод ИТ-систем и специализированного ПО подстанций в эксплуатацию.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.03, 62.09 | ИТ-направления 1.01, 1.06</p>
+                <h3 class="text-lg font-semibold text-primary">Системная интеграция и пусконаладка</h3>
+                <p class="text-sm text-muted-foreground mt-2">Интеграция разнородного оборудования и программных средств в единый контур мониторинга, развертывание сетевых программных платформ, установка, настройка, конфигурирование, тестирование, испытания и ввод ИТ-систем подстанций в промышленную эксплуатацию.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.03</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.09</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.06</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 8.01</span>
+                </div>
             </div>
+            <!-- Карточка 4 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">4. Техническое сопровождение и администрирование ИТ-сетей</h3>
-                <p class="text-sm text-muted-foreground mt-2">Непрерывное сопровождение программного обеспечения, удаленное администрирование систем мониторинга ИТ-инфраструктуры подстанций и программных средств систем промышленной связи.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 62.03.13, 95.11 | ИТ-направления 1.01, 1.06</p>
+                <h3 class="text-lg font-semibold text-primary">Техническое сопровождение и администрирование ИТ-сетей</h3>
+                <p class="text-sm text-muted-foreground mt-2">Услуги по непрерывному техническому сопровождению, удаленному администрированию сетевой инфраструктуры подстанций, долгосрочной поддержке систем промышленной связи и сопровождению компьютерных систем.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 62.03.13</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 95.11</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.06</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 4.01</span>
+                </div>
             </div>
+            <!-- Карточка 5 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">5. Управление данными и диспетчеризация</h3>
-                <p class="text-sm text-muted-foreground mt-2">Автоматизированный сбор, запись, накопление и обработка телеметрии (ТИ, ТУ, ТС), ведение баз данных реального времени.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 63.11, 63.12 | ИТ-направление 26.01</p>
+                <h3 class="text-lg font-semibold text-primary">Управление данными и диспетчеризация</h3>
+                <p class="text-sm text-muted-foreground mt-2">Автоматизированный сбор, запись, накопление, структурирование и обработка телеметрии (ТИ, ТУ, ТС), ведение баз данных реального времени и осуществление мониторинга за поступающей технологической информацией.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 63.11</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 3.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 26.01</span>
+                </div>
             </div>
+            <!-- Карточка 6 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">6. Поставка программно-аппаратных комплексов (ПАК) и ПО</h3>
-                <p class="text-sm text-muted-foreground mt-2">Оптовая поставка, дистрибуция и реализация прав на лицензионное программное обеспечение, а также готовых программно-аппаратных комплексов, шкафов телемеханики и промышленного сетевого оборудования с предустановленным софтом D4NMS.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 46.51.2 | ИТ-направления 2.01, 27.01</p>
+                <h3 class="text-lg font-semibold text-primary">Поставка программно-аппаратных комплексов (ПАК) и ПО</h3>
+                <p class="text-sm text-muted-foreground mt-2">Оптовая поставка и дистрибуция лицензионного программного обеспечения, а также готовых программно-аппаратных комплексов, шкафов телемеханики и промышленного сетевого оборудования для нужд энергетики.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 46.51.2</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.02</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 2.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 27.01</span>
+                </div>
             </div>
+            <!-- Карточка 7 -->
             <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="text-lg font-semibold text-primary">7. Организация сетей и передача данных</h3>
-                <p class="text-sm text-muted-foreground mt-2">Обеспечение межобъектной связи, предоставление услуг по передаче данных, защищенному доступу к ИКТ-сетям и администрированию средств сетевой безопасности на базе программного комплекса D4NMS и партнерских решений.</p>
-                <p class="text-xs text-muted-foreground mt-2">ОКВЭД 61.10.3 | ИТ-направления 1.06, 11.01, 18.01</p>
+                <h3 class="text-lg font-semibold text-primary">Организация сетей и передача данных</h3>
+                <p class="text-sm text-muted-foreground mt-2">Деятельность по обеспечению межобъектной связи, предоставлению услуг по передаче данных, защищенному доступу к ИКТ-сетям и администрированию средств сетевой безопасности на базе программного комплекса D4NMS и партнерских решений.</p>
+                <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ОКВЭД 61.10.3</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 1.06</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 4.01</span>
+                    <span class="text-xs px-2 py-1 bg-muted/30 rounded-full text-muted-foreground">ИТ-направление 11.01</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Ориентировочные базовые ставки -->
+    <!-- Блок 3: Стоимость работ (обновлённая сетка) -->
     <section>
-        <h2 class="text-2xl font-semibold mb-6 text-primary">Ориентировочные базовые ставки по этапам</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="font-semibold">Технологический аудит и предпроектное обследование</h3>
-                <p class="text-lg font-bold text-primary mt-2">от 10 000 руб.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="font-semibold">Разработка ТЗ и проектирование</h3>
-                <p class="text-lg font-bold text-primary mt-2">от 30 000 руб.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="font-semibold">Строительно-монтажные (СМР) и пусконаладочные работы (ПНР)</h3>
-                <p class="text-lg font-bold text-primary mt-2">от 100 000 руб.</p>
-            </div>
-            <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
-                <h3 class="font-semibold">Техническая поддержка и сопровождение</h3>
-                <p class="text-lg font-bold text-primary mt-2">от 10 000 руб.</p>
-            </div>
+        <h2 class="text-2xl font-semibold mb-4 text-primary">Стоимость работ</h2>
+        <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 mb-6">
+            <p class="text-sm text-muted-foreground leading-relaxed">
+                Ввиду высокой технологической сложности и индивидуальных параметров объектов автоматизации энергетики, фиксированная стоимость комплексных проектов отсутствует. Итоговая смета всегда рассчитывается индивидуально под ваши Технические условия (ТУ) и техническое задание заказчика.
+            </p>
+            <p class="text-sm text-muted-foreground leading-relaxed mt-2">
+                Мы гибки в форматах контрактования. Наша команда реализует проекты в любом объеме:
+            </p>
+            <ul class="list-disc list-inside text-sm text-muted-foreground mt-2">
+                <li><strong>Комплексные решения «под ключ»</strong> — от предпроектного обследования до ввода подстанции в промышленную эксплуатацию.</li>
+                <li><strong>Отдельные виды работ</strong> — локальный инженерно-технический аудит или точечный субподряд.</li>
+            </ul>
         </div>
-        <div class="mt-6 p-4 bg-muted/20 rounded-lg border border-border text-sm text-muted-foreground">
-            <p>Ввиду высокой технологической сложности и индивидуальных параметров объектов автоматизации энергетики, окончательная оценка стоимости каждого проекта рассчитывается строго индивидуально на основании согласованного технического задания (ТЗ) заказчика.</p>
+
+        <h3 class="text-xl font-semibold mb-4">Ориентировочные базовые ставки по этапам</h3>
+        <div class="overflow-x-auto">
+            <table class="min-w-full border border-border rounded-lg overflow-hidden">
+                <thead class="bg-muted/30">
+                    <tr>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-muted-foreground border-b border-border">Этап работ</th>
+                        <th class="px-4 py-2 text-left text-sm font-medium text-muted-foreground border-b border-border">Ориентировочная стоимость</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-border">
+                    <tr>
+                        <td class="px-4 py-3 text-sm">Технический аудит и предпроектное обследование объектов автоматизации и связи</td>
+                        <td class="px-4 py-3 text-base font-bold text-primary">от 10 000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 text-sm">Проектирование ИТ-архитектуры, разработка технических проектов программных комплексов и баз данных</td>
+                        <td class="px-4 py-3 text-base font-bold text-primary">от 30 000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 text-sm">Услуги по установке, настройке, адаптации, тестированию и вводу в эксплуатацию программного обеспечения и сетевых платформ</td>
+                        <td class="px-4 py-3 text-base font-bold text-primary">от 100 000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-3 text-sm">Комплексная системная интеграция и поставка готовых программно-аппаратных комплексов (ПАК) телемеханики и связи</td>
+                        <td class="px-4 py-3 text-base font-bold text-primary">на основании индивидуального расчета</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+        <p class="text-sm text-muted-foreground mt-4">
+            Для определения точной стоимости отдельных работ или сквозного проекта под конфигурацию вашей подстанции, пожалуйста, отправьте <a href="{% url 'core:contacts' %}" class="text-primary hover:underline font-medium">официальную заявку на расчёт</a>.
+        </p>
     </section>
 </div>
+
+<!-- Скрипт для интерактивной подсветки (Блок 1) -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const leftItems = document.querySelectorAll('#left-list li');
+        const rightItems = document.querySelectorAll('#right-list li');
+
+        function resetHighlight() {
+            leftItems.forEach(el => el.classList.remove('border-primary', 'bg-primary/10'));
+            rightItems.forEach(el => el.classList.remove('border-primary', 'bg-primary/10'));
+        }
+
+        function highlightPair(targetId) {
+            resetHighlight();
+            leftItems.forEach(el => {
+                if (el.dataset.target === targetId) {
+                    el.classList.add('border-primary', 'bg-primary/10');
+                }
+            });
+            rightItems.forEach(el => {
+                if (el.dataset.target === targetId) {
+                    el.classList.add('border-primary', 'bg-primary/10');
+                }
+            });
+        }
+
+        leftItems.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                highlightPair(this.dataset.target);
+            });
+            el.addEventListener('mouseleave', resetHighlight);
+        });
+
+        rightItems.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                highlightPair(this.dataset.target);
+            });
+            el.addEventListener('mouseleave', resetHighlight);
+        });
+    });
+</script>
 {% endblock %}

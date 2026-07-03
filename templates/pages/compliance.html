@@ -1,79 +1,136 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Правовая информация — Д4 Технологии{% endblock %}
 {% block content %}
 <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8 text-center">Правовая информация и реквизиты</h1>
-    <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 md:p-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Левая колонка: реквизиты -->
-            <div>
-                <h2 class="text-xl font-semibold mb-4 text-primary">Общие сведения</h2>
-                <dl class="space-y-3">
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Полное наименование</dt>
-                        <dd class="text-base">{{ contacts.full_name }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Сокращённое наименование</dt>
-                        <dd class="text-base">ООО «Д4 Технологии»</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">ИНН</dt>
-                        <dd class="text-base">{{ contacts.inn }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">ОГРН</dt>
-                        <dd class="text-base">{{ contacts.ogrn }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">ОКВЭД (основной)</dt>
-                        <dd class="text-base">{{ contacts.okved }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Коды видов деятельности в области ИТ</dt>
-                        <dd class="text-base">{{ contacts.it_activity_codes }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Адрес</dt>
-                        <dd class="text-base">{{ contacts.address }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Телефон</dt>
-                        <dd class="text-base">{{ contacts.phone }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Email</dt>
-                        <dd class="text-base">{{ contacts.email }}</dd>
-                    </div>
-                </dl>
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-center">Раскрытие информации о деятельности ИТ-компании ООО «Д4 технологии» в соответствии с Приказом Минцифры России № 511</h1>
+
+    <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6 md:p-8 space-y-8">
+
+        <!-- 1. Общие сведения об организации и юридические реквизиты -->
+        <section>
+            <h2 class="text-2xl font-semibold text-primary mb-4">1. Общие сведения об организации и юридические реквизиты</h2>
+            <ul class="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                <li><strong>Полное наименование организации:</strong> Общество с ограниченной ответственностью «Д4 технологии»</li>
+                <li><strong>Сокращенное наименование организации:</strong> ООО «Д4 технологии»</li>
+                <li><strong>Юридический адрес:</strong> 109390 г. Москва, вн. тер. г. муниципальный округ Текстильщики, ул. Люблинская, д. 47, помещ. IX (этаж 1), комн. 1, офис 17-5</li>
+                <li><strong>Идентификационный номер налогоплательщика (ИНН):</strong> 9723116807</li>
+                <li><strong>Основной государственный регистрационный номер (ОГРН):</strong> 1217700245916</li>
+                <li><strong>Код причины постановки на учёт (КПП):</strong> 772301001</li>
+                <li><strong>Основной код ОКВЭД:</strong> 62.02 (Деятельность консультативная и работы в области компьютерных технологий)</li>
+                <li><strong>Дополнительные профильные коды ОКВЭД:</strong> 62.01, 62.02.1, 62.02.4, 62.03, 62.03.13, 62.09, 63.11, 61.10.3, 95.11, 46.51.2</li>
+                <li><strong>Адрес электронной почты (E-mail):</strong> info@d4tech.ru</li>
+                <li><strong>Номер телефона:</strong> +7 (910) 235-70-37</li>
+            </ul>
+        </section>
+
+        <!-- 2. Сведения о собственном программном обеспечении -->
+        <section>
+            <h2 class="text-2xl font-semibold text-primary mb-4">2. Сведения о собственном программном обеспечении</h2>
+            <p class="text-sm text-muted-foreground mb-4">Общество с ограниченной ответственностью «Д4 технологии» является разработчиком и законным правообладателем программного комплекса <strong>D4NMS</strong>.</p>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.1. Правовой статус и государственная регистрация</h3>
+            <ul class="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                <li><strong>Правовой статус ПО:</strong> Исключительные права на программное обеспечение принадлежат ООО «Д4 технологии» на основании Свидетельства о государственной регистрации программы для ЭВМ <a href="{% static 'images/свидетельство о госрегистрации ПО IPD D4 МАКС.pdf' %}" target="_blank" class="text-primary hover:underline font-semibold">№ 2026611391</a>, выданного Федеральной службой по интеллектуальной собственности (Роспатент).</li>
+                <li><strong>Статус в Едином реестре:</strong> Программный комплекс <strong>D4 NMS</strong> официально включен в Единый реестр российских программ для ЭВМ и баз данных Минцифры России. Реестровая запись <a href="https://reestr.digital.gov.ru/reestr/12166751/?sphrase_id=22694841" target="_blank" class="text-primary hover:underline font-semibold">№33911</a>.</li>
+                <li><strong>Способы предоставления права использования:</strong> Права на использование Программного комплекса D4NMS предоставляются конечным пользователям на основании <strong>Лицензионного договора</strong> путем передачи неисключительной лицензии в объёме и на срок, определённые соглашением сторон.</li>
+                <li><strong>Порядок предоставления доступа (техническая поставка):</strong> Передача дистрибутива программного обеспечения D4NMS и сопроводительной технической документации осуществляется правообладателем в электронном виде (путем отправки на защищенный электронный адрес Заказчика или предоставления удаленного доступа к закрытому репозиторию компании) в течение 3 рабочих дней после подписания Лицензионного договора.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.2. Технические характеристики</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                <li><strong>Производительность:</strong> до 1000 устройств на сервере; интервал опроса — настраиваемый; до 50 одновременных пользователей</li>
+                <li><strong>Мониторинг:</strong> Ping, SSH, SNMP; маршрутизаторы, коммутаторы, серверы, МЭ, точки доступа, IP-телефоны; порты, VLAN, STP</li>
+                <li><strong>Управление:</strong> выполнение CLI-команд по SSH, в том числе по расписанию</li>
+                <li><strong>Поддерживаемые вендоры:</strong> Cisco, Eltex, Huawei, MikroTik, Juniper</li>
+                <li><strong>Безопасность:</strong> шифрование учётных данных (Fernet), защита API (CORS), аудит действий пользователей</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.3. Программное обеспечение и веб-разработка</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                <li><strong>Python</strong> — серверная логика, интеграционные сервисы, аналитика</li>
+                <li><strong>Django</strong> — корпоративные веб-порталы и административные интерфейсы</li>
+                <li><strong>JavaScript / HTML / CSS</strong> — клиентские web-интерфейсы и мнемосхемы</li>
+                <li><strong>PostgreSQL</strong> — хранение телеметрии, событий и конфигураций</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.4. Инфраструктура и эксплуатация</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                <li><strong>Docker</strong> — контейнеризация и развёртывание сервисов</li>
+                <li><strong>MPLS / SD-WAN / SPbT</strong> — построение отказоустойчивых сетей передачи данных</li>
+                <li><strong>Big Data</strong> — прогнозная аналитика, обработка архивов телеметрии</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.5. Промышленная автоматизация и SCADA</h3>
+            <ul class="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                <li><strong>SCADA / HMI</strong> — сбор, визуализация и управление технологическими процессами</li>
+                <li><strong>Протоколы телемеханики</strong> — IEC 60870-5-104, IEC 61850, Modbus и др.</li>
+                <li><strong>АСУ ТП</strong> — интеграция с РЗА, АИИС КУЭ, системами видеонаблюдения и связи</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">2.6. Стоимость лицензирования программного комплекса D4NMS</h3>
+            <ul class="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                <li><strong>Базовая лицензия</strong> — 500 000 рублей (до 50 сетевых устройств).</li>
+                <li><strong>Расширенная лицензия</strong> — дополнительные 100 000 рублей за каждые 10 хостов сверх базовой лицензии.</li>
+            </ul>
+            <p class="text-sm text-muted-foreground mt-2">Официальный сайт продукта и техническая документация: <a href="https://d4nms.ru" target="_blank" class="text-primary hover:underline">d4nms.ru</a></p>
+        </section>
+
+        <!-- 3. Перечень оказываемых ИТ-услуг и их базовая стоимость -->
+        <section>
+            <h2 class="text-2xl font-semibold text-primary mb-4">3. Перечень оказываемых ИТ-услуг и их базовая стоимость</h2>
+            <p class="text-sm font-medium text-muted-foreground mb-4">Описание ИТ-направлений деятельности компании:</p>
+
+            <ul class="list-disc list-inside space-y-4 text-sm text-muted-foreground">
+                <li>
+                    <strong>Комплексный консалтинг и проектирование</strong> <span class="text-xs">(ОКВЭД 62.02, 62.02.1, 62.02.4 | ИТ-направления 1.01; 1.06; 8.01)</span><br>
+                    Предпроектное обследование и технический аудит объектов автоматизации, проектирование и разработка ИТ-архитектуры программных комплексов, баз данных и компьютерных систем цифровых подстанций, подготовка программного обеспечения систем к эксплуатации.
+                </li>
+                <li>
+                    <strong>Разработка и кастомизация ПО</strong> <span class="text-xs">(ОКВЭД 62.01, 62.09 | ИТ-направление 1.01)</span><br>
+                    Создание прикладного программного обеспечения, проектирование баз данных реального времени, адаптация, модификация, доработка и кастомизация программных модулей под технические условия заказчика.
+                </li>
+                <li>
+                    <strong>Системная интеграция и пусконаладка</strong> <span class="text-xs">(ОКВЭД 62.03, 62.09 | ИТ-направления 1.01; 1.06; 8.01)</span><br>
+                    Интеграция разнородного оборудования и программных средств в единый контур мониторинга, развертывание сетевых программных платформ, установка, настройка, конфигурирование, тестирование, испытания и ввод ИТ-систем подстанций в промышленную эксплуатацию.
+                </li>
+                <li>
+                    <strong>Техническое сопровождение и администрирование ИТ-сетей</strong> <span class="text-xs">(ОКВЭД 62.03.13, 95.11 | ИТ-направления 1.01; 1.06; 4.01)</span><br>
+                    Услуги по непрерывному техническому сопровождению, удаленному администрированию сетевой инфраструктуры подстанций, долгосрочной поддержке систем промышленной связи и сопровождению компьютерных систем.
+                </li>
+                <li>
+                    <strong>Управление данными и диспетчеризация</strong> <span class="text-xs">(ОКВЭД 63.11 | ИТ-направления 3.01; 26.01)</span><br>
+                    Автоматизированный сбор, запись, накопление, структурирование и обработка телеметрии (ТИ, ТУ, ТС), ведение баз данных реального времени и осуществление мониторинга за поступающей технологической информацией.
+                </li>
+                <li>
+                    <strong>Поставка программно-аппаратных комплексов (ПАК)</strong> <span class="text-xs">(ОКВЭД 46.51.2 | ИТ-направления 1.02; 2.01; 27.01)</span><br>
+                    Оптовая поставка и дистрибуция лицензионного программного обеспечения, а также готовых программно-аппаратных комплексов, шкафов телемеханики и промышленного сетевого оборудования для нужд энергетики.
+                </li>
+                <li>
+                    <strong>Организация сетей и передача данных</strong> <span class="text-xs">(ОКВЭД 61.10.3 | ИТ-направления 1.06; 4.01; 11.01)</span><br>
+                    Деятельность по обеспечению межобъектной связи, предоставлению услуг по передаче данных, обеспечению защищённого доступа к информационно-коммуникационным сетям и администрированию средств сетевой безопасности на базе программного комплекса D4NMS и партнерских решений.
+                </li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-primary mt-6 mb-3">Ориентировочные базовые ставки по этапам</h3>
+            <ul class="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                <li><strong>Технический аудит и предпроектное обследование объектов автоматизации и связи</strong> — <span class="text-primary font-medium">от 10 000 руб.</span></li>
+                <li><strong>Проектирование ИТ-архитектуры, разработка технических проектов программных комплексов и баз данных</strong> — <span class="text-primary font-medium">от 30 000 руб.</span></li>
+                <li><strong>Услуги по установке, настройке, адаптации, тестированию и вводу в эксплуатацию программного обеспечения и сетевых платформ</strong> — <span class="text-primary font-medium">от 100 000 руб.</span></li>
+                <li><strong>Комплексная системная интеграция и поставка готовых программно-аппаратных комплексов (ПАК) телемеханики и связи</strong> — <span class="text-primary font-medium">на основании индивидуального расчета.</span></li>
+            </ul>
+            <div class="mt-4 p-4 bg-muted/20 rounded-lg border border-border text-sm text-muted-foreground">
+                <p>Ввиду высокой технологической сложности и индивидуальных параметров объектов автоматизации энергетики, окончательная сметная стоимость каждого проекта рассчитывается строго индивидуально на основании согласованного технического задания (ТЗ) заказчика.</p>
             </div>
-            <!-- Правая колонка: деятельность, ПО, технологии -->
-            <div>
-                <h2 class="text-xl font-semibold mb-4 text-primary">Деятельность и технологии</h2>
-                <dl class="space-y-3">
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Описание деятельности</dt>
-                        <dd class="text-base">{{ contacts.activity_description|default:"Информация отсутствует" }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Информация о стоимости товаров/услуг</dt>
-                        <dd class="text-base">{{ contacts.pricing_info|default:"Информация отсутствует" }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Права на ПО и способы предоставления</dt>
-                        <dd class="text-base">{{ contacts.rights_info|default:"Информация отсутствует" }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">Используемые технологии</dt>
-                        <dd class="text-base">{{ contacts.tech_stack|default:"Информация отсутствует" }}</dd>
-                    </div>
-                    <div>
-                        <dt class="text-sm font-medium text-muted-foreground">ПО в реестре российского ПО</dt>
-                        <dd class="text-base">{{ contacts.registry_info|default:"Информация отсутствует" }}</dd>
-                    </div>
-                </dl>
-            </div>
+        </section>
+
+        <!-- Блок с выпиской из реестра аккредитованных организаций -->
+        <div class="mt-8 p-4 bg-muted/10 rounded-lg border border-border">
+            <h3 class="text-lg font-semibold text-primary mb-3">Государственная аккредитация</h3>
+            <p class="text-sm text-muted-foreground">Организация аккредитована в качестве ИТ-компании (решение Минцифры № АО-20251013-32678149401-3 от 10.11.2025).</p>
+            <p class="text-sm mt-2"><a href="{% static 'images/_Выписка_из_реестра_аккредитованных_организаций_АО-20251013-32678149401-3.pdf' %}" target="_blank" class="text-primary hover:underline">Скачать выписку из реестра (PDF)</a></p>
         </div>
+
         <div class="mt-8 text-sm text-muted-foreground border-t border-border pt-4">
             <p>Информация на этой странице размещена в соответствии с требованиями Приказа Минцифры России от 02.06.2025 № 511.</p>
             <p class="mt-1">Сайт работает круглосуточно, доступ без регистрации.</p>

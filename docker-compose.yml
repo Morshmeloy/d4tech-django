@@ -17,7 +17,8 @@ services:
       retries: 5
 
   web:
-    build: .
+    build: .                            # ← оставляем для локальной сборки
+    image: d4tech-web                   # ← ДОБАВЬТЕ ЭТУ СТРОКУ
     restart: unless-stopped
     command: >
       sh -c "python manage.py migrate --noinput &&

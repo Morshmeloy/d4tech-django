@@ -37,12 +37,6 @@
                             Поддержка
                         </a>
                     </li>
-                    <li>
-                        <a href="{% url 'core:compliance' %}"
-                           class="flex flex-col gap-1 rounded-lg p-2 text-sm transition-all outline-none {% if request.path == '/compliance/' %}bg-accent/70 text-accent-foreground font-medium{% else %}hover:bg-accent hover:text-accent-foreground{% endif %}">
-                            Правовая информация
-                        </a>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -67,7 +61,6 @@
             <a href="{% url 'core:software' %}" class="text-sm font-medium hover:text-primary">Программное обеспечение</a>
             <a href="{% url 'core:contacts' %}" class="text-sm font-medium hover:text-primary">Контакты</a>
             <a href="{% url 'core:support' %}" class="text-sm font-medium hover:text-primary">Поддержка</a>
-            <a href="{% url 'core:compliance' %}" class="text-sm font-medium hover:text-primary">Правовая информация</a>
             <div class="flex flex-col text-sm pt-4 border-t">
                 <a href="tel:{{ contacts.phone }}">{{ contacts.phone }}</a>
                 <a href="mailto:{{ contacts.email }}">{{ contacts.website }}</a>
