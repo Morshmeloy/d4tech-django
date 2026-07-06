@@ -42,8 +42,17 @@
     </script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-/rJKQnzOkEo+daG0jMjU1IwwY9unxt1NBw3Ef2fmOJ3PW/TfAg2KXVoWwMZQZtw9">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" crossorigin="anonymous" integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=2">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=3">
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <!-- jQuery и jQueryUI (обязательно для coverflowjs) -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+    <!-- coverflowjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coverflowjs/coverflow@master/dist/coverflow.css">
+    <script src="https://cdn.jsdelivr.net/gh/coverflowjs/coverflow@master/dist/coverflow.min.js"></script>
 </head>
 <body class="antialiased flex flex-col min-h-screen">
     {% include "components/header.html" %}
