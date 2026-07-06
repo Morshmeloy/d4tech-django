@@ -8,54 +8,52 @@
     <section class="mb-12">
         <div class="bg-card/40 backdrop-blur-sm rounded-xl border border-border p-6">
             <p class="text-center text-lg font-medium mb-8">Выберите интересующий технологический модуль для просмотра показателей эффективности решений</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="direction-pair">
-                <!-- Левая колонка: Инженерные направления -->
-                <div>
-                    <h2 class="text-xl font-semibold text-primary mb-4">Инженерные направления</h2>
-                    <ul class="space-y-3" id="left-list">
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="1">
-                            <strong>Дистанционный мониторинг и технологический контроль:</strong> автоматизированный сбор параметров телеметрии (ТИ, ТУ, ТС) с ПЛК подстанций.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="2">
-                            <strong>Промышленная связь и ССПИ:</strong> проектирование и построение отказоустойчивых систем передачи данных по протоколам МЭК 104 и МЭК 61850.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="3">
-                            <strong>Энергоснабжение и автоматика:</strong> комплектация и интеграция систем гарантированного питания и низковольтных щитов (шкафы НКУ).
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="4">
-                            <strong>Сквозной контроль ИТ-инфраструктуры:</strong> непрерывный мониторинг и цифровизация объектов на базе собственной real-time платформы D4NMS.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="5">
-                            <strong>Информационная безопасность КИИ:</strong> технологический аудит и комплексная киберзащита энергообъектов в соответствии с ФЗ-187.
-                        </li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="direction-grid">
+                <!-- Левый 1 -->
+                <div class="direction-item left p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="1">
+                    <strong>Дистанционный мониторинг и технологический контроль:</strong> автоматизированный сбор параметров телеметрии (ТИ, ТУ, ТС) с ПЛК подстанций.
                 </div>
-                <!-- Правая колонка: Бизнес-эффект -->
-                <div>
-                    <h2 class="text-xl font-semibold text-primary mb-4">Бизнес-эффект</h2>
-                    <ul class="space-y-3" id="right-list">
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="1">
-                            <strong>БЕЗАВАРИЙНОСТЬ:</strong> мгновенное обнаружение отклонений в работе оборудования и предотвращение технологических сбоев.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="2">
-                            <strong>НАБЛЮДАЕМОСТЬ:</strong> 100% визуализация топологии сети и прозрачность передачи данных на диспетчерские пункты в реальном времени.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="3">
-                            <strong>СНИЖЕНИЕ OPEX:</strong> сокращение затрат на обслуживание за счет уменьшения количества выездов ремонтных бригад на объекты.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="4">
-                            <strong>ЭФФЕКТИВНОСТЬ:</strong> multi-vendor экономия бюджета, мгновенный отклик на инциденты и 100% готовность к импортозамещению.
-                        </li>
-                        <li class="p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="5">
-                            <strong>КИБЕРУСТОЙЧИВОСТЬ (ФЗ-187):</strong> гарантированная защита периметра от внешних угроз и выполнение требований Минэнерго и ФСТЭК.
-                        </li>
-                    </ul>
+                <!-- Правый 1 -->
+                <div class="direction-item right p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="1">
+                    <strong>БЕЗАВАРИЙНОСТЬ:</strong> мгновенное обнаружение отклонений в работе оборудования и предотвращение технологических сбоев.
+                </div>
+                <!-- Левый 2 -->
+                <div class="direction-item left p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="2">
+                    <strong>Промышленная связь и ССПИ:</strong> проектирование и построение отказоустойчивых систем передачи данных по протоколам МЭК 104 и МЭК 61850.
+                </div>
+                <!-- Правый 2 -->
+                <div class="direction-item right p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="2">
+                    <strong>НАБЛЮДАЕМОСТЬ:</strong> 100% визуализация топологии сети и прозрачность передачи данных на диспетчерские пункты в реальном времени.
+                </div>
+                <!-- Левый 3 -->
+                <div class="direction-item left p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="3">
+                    <strong>Энергоснабжение и автоматика:</strong> комплектация и интеграция систем гарантированного питания и низковольтных щитов (шкафы НКУ).
+                </div>
+                <!-- Правый 3 -->
+                <div class="direction-item right p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="3">
+                    <strong>СНИЖЕНИЕ OPEX:</strong> сокращение затрат на обслуживание за счет уменьшения количества выездов ремонтных бригад на объекты.
+                </div>
+                <!-- Левый 4 -->
+                <div class="direction-item left p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="4">
+                    <strong>Сквозной контроль ИТ-инфраструктуры:</strong> непрерывный мониторинг и цифровизация объектов на базе собственной real-time платформы D4NMS.
+                </div>
+                <!-- Правый 4 -->
+                <div class="direction-item right p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="4">
+                    <strong>ЭФФЕКТИВНОСТЬ:</strong> multi-vendor экономия бюджета, мгновенный отклик на инциденты и 100% готовность к импортозамещению.
+                </div>
+                <!-- Левый 5 -->
+                <div class="direction-item left p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300 cursor-pointer" data-target="5">
+                    <strong>Информационная безопасность КИИ:</strong> технологический аудит и комплексная киберзащита энергообъектов в соответствии с ФЗ-187.
+                </div>
+                <!-- Правый 5 -->
+                <div class="direction-item right p-3 bg-muted/20 rounded-lg border border-border transition-all duration-300" data-target="5">
+                    <strong>КИБЕРУСТОЙЧИВОСТЬ (ФЗ-187):</strong> гарантированная защита периметра от внешних угроз и выполнение требований Минэнерго и ФСТЭК.
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок 2: Инженерный стек услуг (7 карточек) -->
+    <!-- Блок 2: Инженерный стек услуг (7 карточек с разбитыми тегами) -->
     <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-6 text-primary">Инженерный стек услуг</h2>
         <div class="space-y-6">
@@ -192,43 +190,52 @@
     </section>
 </div>
 
-<!-- Скрипт для интерактивной подсветки (Блок 1) -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const leftItems = document.querySelectorAll('#left-list li');
-        const rightItems = document.querySelectorAll('#right-list li');
+        const items = document.querySelectorAll('.direction-item');
+        let activeTarget = null;
 
-        function resetHighlight() {
-            leftItems.forEach(el => el.classList.remove('border-primary', 'bg-primary/10'));
-            rightItems.forEach(el => el.classList.remove('border-primary', 'bg-primary/10'));
+        function resetActive() {
+            items.forEach(el => el.classList.remove('border-primary', 'bg-primary/10'));
         }
 
-        function highlightPair(targetId) {
-            resetHighlight();
-            leftItems.forEach(el => {
+        function setActive(targetId) {
+            resetActive();
+            items.forEach(el => {
                 if (el.dataset.target === targetId) {
                     el.classList.add('border-primary', 'bg-primary/10');
                 }
             });
-            rightItems.forEach(el => {
-                if (el.dataset.target === targetId) {
-                    el.classList.add('border-primary', 'bg-primary/10');
-                }
-            });
+            activeTarget = targetId;
         }
 
-        leftItems.forEach(el => {
-            el.addEventListener('mouseenter', function() {
-                highlightPair(this.dataset.target);
+        // Десктопы: hover
+        items.forEach(el => {
+            el.addEventListener('mouseenter', function(e) {
+                if (window.innerWidth > 768) {
+                    setActive(this.dataset.target);
+                }
             });
-            el.addEventListener('mouseleave', resetHighlight);
+            el.addEventListener('mouseleave', function(e) {
+                if (window.innerWidth > 768) {
+                    resetActive();
+                }
+            });
         });
 
-        rightItems.forEach(el => {
-            el.addEventListener('mouseenter', function() {
-                highlightPair(this.dataset.target);
+        // Мобильные: клик
+        items.forEach(el => {
+            el.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    const target = this.dataset.target;
+                    if (activeTarget === target) {
+                        resetActive();
+                        activeTarget = null;
+                    } else {
+                        setActive(target);
+                    }
+                }
             });
-            el.addEventListener('mouseleave', resetHighlight);
         });
     });
 </script>
