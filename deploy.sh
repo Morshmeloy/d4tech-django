@@ -2,7 +2,7 @@
 set -e
 
 # === НАСТРОЙКИ ===
-SERVER="macar@192.168.0.188"
+SERVER="macar@10.8.0.4"
 SSH_KEY="$HOME/.ssh/id_ed25519"
 APP_DIR="/home/macar/d4tech"
 IMAGE_NAME="d4tech-web"          # должно совпадать с image в compose
